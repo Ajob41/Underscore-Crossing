@@ -3,11 +3,11 @@ module numerical.app;
 import core.stdc.stdio;
 import core.stdc.stdlib;
 
-void main()@nogc
+extern (C) void main()
 {
 
-	bool negative = isNegative(-12);
-	printf("%d", negative);
+	bool isWhole = isWholeNumber(12.5);
+	printf("%d", isWhole);
 
 }
 
@@ -57,7 +57,7 @@ bool isNegative(int number)
 
 }
 
-string typeOfNumber(T)(T t) @nogc
+string typeOfNumber(T)(T t)
 {
 
 	if (t - cast(int) t == 0)
@@ -89,4 +89,13 @@ string typeOfNumber(T)(T t) @nogc
 		return "decimal";
 	}
 
+}
+
+bool isWholeNumber(T)(T t)
+{
+	if (typeOfNumber(t) == "whole")
+	{
+		return true;
+	}
+	return false;
 }
