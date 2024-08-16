@@ -1,4 +1,4 @@
-module numerical.app;
+module numerical.conversion;
 
 import core.stdc.stdio;
 import core.stdc.stdlib;
@@ -7,7 +7,7 @@ extern (C) void main()
 {
 
 	bool isWhole = isWholeNumber(12.5);
-	printf("%d", isWhole);
+	
 
 }
 
@@ -97,5 +97,13 @@ bool isWholeNumber(T)(T t)
 	{
 		return true;
 	}
+	return false;
+}
+
+bool isDecimalNumber(T)(T t) {
+	if(!isWholeNumber(t)){
+		return true;
+	}
+
 	return false;
 }
