@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/uderscore_crossing
+uderscore_crossing.so
+uderscore_crossing.dylib
+uderscore_crossing.dll
+uderscore_crossing.a
+uderscore_crossing.lib
+uderscore_crossing-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
